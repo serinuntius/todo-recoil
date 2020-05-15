@@ -4,12 +4,12 @@ import {taskState, Task} from "./atoms/Task";
 
 const TaskInput = () => {
     const [title, setTitle] = useState('');
-    const setTask = useSetRecoilState(taskState);
+    const setTasks = useSetRecoilState(taskState);
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setTitle(event.target.value)
     }
     const onClick = () => {
-        setTask(t => {
+        setTasks(t => {
             return [...t, {title, completed: false}]
         })
         setTitle('')
