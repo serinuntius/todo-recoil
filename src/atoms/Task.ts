@@ -10,5 +10,4 @@ const initialTasks: Task[] = [];
 export const taskState = atom({
     key: 'task',
     default: initialTasks,
-    // dangerouslyAllowMutability: true
 })
